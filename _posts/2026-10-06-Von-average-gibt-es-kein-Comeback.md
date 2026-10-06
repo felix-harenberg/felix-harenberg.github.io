@@ -3,9 +3,8 @@ layout: post
 title: "Von average gibt es kein Comeback"
 ---
 
-# Von average gibt es kein Comeback
 
-ch sehe ständig Videos auf Instagram von jemandem der extrem Fett war und jetzt super lean und einen Traumkörper hat oder jemand er vorher auf der Strasse gelebt hat und jetzt einen Lambo fährt. Einfach dieses Comeback von scheisse zu super.
+Ich sehe ständig Videos auf Instagram von jemandem der extrem Fett war und jetzt super lean und einen Traumkörper hat oder jemand er vorher auf der Strasse gelebt hat und jetzt einen Lambo fährt. Einfach dieses Comeback von scheisse zu super.
 
 Ich weiss nicht was das ist. 
 
