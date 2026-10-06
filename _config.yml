@@ -1,0 +1,23 @@
+title: Felix Harenberg
+description: Gedanken und Meinungen.
+author:
+  name: Felix Harenberg
+url: "https://felix-harenberg.github.io"
+baseurl: ""
+lang: de
+
+theme: minima
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+github_username: felix-harenberg
+instagram_username: felix.harenberg
+
+permalink: /:year/:month/:title/
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor
