@@ -1,0 +1,40 @@
+---
+layout: default
+---
+<section class="hero pad">
+  <h1>Training,<br>Disziplin,<br><em>You vs You.</em></h1>
+  {% assign post_count = site.posts | size %}
+  <div class="count{% if post_count > 9 %} two-digit{% endif %}"><span>{{ post_count }}</span><small>Posts</small></div>
+</section>
+
+<div class="pad rule">
+  <hr>
+  <div class="meta">
+    <div>Blog von {{ site.author.name | split: ' ' | first }}<br>{{ site.author.name | split: ' ' | last }}</div>
+    <div>Sport, Fortschritt,<br>Gedanken</div>
+    <div>Seit<br>{{ site.posts.last.date | date: "%m / %Y" }}</div>
+  </div>
+</div>
+
+<section class="posts pad" id="posts">
+  <div class="label">Alle Posts</div>
+  {% for post in site.posts %}
+  {% assign n = forloop.rindex %}
+  <a class="post-row" href="{{ post.url | relative_url }}">
+    <span class="label">{{ post.date | date: "%d.%m.%y" }}<br>Nr. {% if n < 10 %}0{% endif %}{{ n }}</span>
+    <h2>{{ post.title | escape }}</h2>
+    <p class="ex">{{ post.excerpt | strip_html | truncatewords: 22 }}</p>
+    <span class="arrow">→</span>
+  </a>
+  {% endfor %}
+</section>
+
+<section class="field">
+  <p class="quote">Von Nichts<br>kommt <i>Nichts.</i></p>
+  <p class="note n1"><b>Über —</b> {{ site.about_short }}</p>
+  <p class="note n2">Take messy action. Fang an und hör nicht auf. Ich glaub an dich.</p>
+  <span class="label l1">Est. {{ site.posts.last.date | date: "%Y" }}</span>
+  <span class="label l2">@{{ site.instagram_username }}</span>
+</section>
+
+{{ content }}

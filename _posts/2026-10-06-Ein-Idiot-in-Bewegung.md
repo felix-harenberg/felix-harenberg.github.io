@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Ein Idiot in Bewegung, macht mehr Fortschritt als ein Genie, der steht!"
+title: "Ein Idiot in Bewegung macht mehr Fortschritt als ein Genie, das steht!"
 ---
 
 Dieses Sprichwort kommt für mich gleich nach "Von Nichts kommt Nichts" und es stimmt einfach.

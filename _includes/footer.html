@@ -1,0 +1,7 @@
+<footer class="footer">
+  <div class="word" aria-hidden="true">{% include star.html %}{{ site.author.name | split: ' ' | last }}</div>
+  <div class="foot label">
+    <span>{% for s in site.slogans %}{{ s }} + {% endfor %}</span>
+    <span>© {{ 'now' | date: '%Y' }} {{ site.author.name }}</span>
+  </div>
+</footer>

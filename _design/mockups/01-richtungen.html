@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Blog Design Richtungen</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif&family=Inter+Tight:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Archivo:wght@800;900&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --black: #141414;
+    --white: #f4f4f1;
+    --grey: #b9b9b6;
+    --blue: #1f5fff;
+    --mono: 'JetBrains Mono', ui-monospace, monospace;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: #8f9396; font-family: 'Inter Tight', system-ui, sans-serif; color: var(--black); padding: 48px 16px 96px; }
+  .intro { max-width: 1200px; margin: 0 auto 32px; color: var(--white); }
+  .intro h1 { font-family: var(--mono); font-size: 13px; font-weight: 500; text-transform: uppercase; letter-spacing: .06em; }
+  .intro p { font-family: var(--mono); font-size: 12px; opacity: .8; margin-top: 6px; }
+  .tag { max-width: 1200px; margin: 64px auto 12px; font-family: var(--mono); font-size: 12px; color: var(--white); text-transform: uppercase; letter-spacing: .06em; }
+  .tag b { background: var(--white); color: var(--black); padding: 2px 8px; border-radius: 99px; margin-right: 8px; }
+  .frame { max-width: 1200px; margin: 0 auto; border-radius: 14px; overflow: hidden; container-type: inline-size; position: relative; box-shadow: 0 30px 60px -20px rgba(0,0,0,.35); }
+  .label { font-family: var(--mono); font-size: 11px; text-transform: uppercase; letter-spacing: .05em; }
+  a { color: inherit; }
+
+  /* ---------- A: Editorial Serif ---------- */
+  .a { background: var(--black); color: var(--white); padding: 22px 28px 18px;
+       background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='46' height='46'%3E%3Cpath d='M23 19v8M19 23h8' stroke='%23f4f4f1' stroke-opacity='.16' stroke-width='1'/%3E%3C/svg%3E"); }
+  .a nav { display: grid; grid-template-columns: 1fr 1fr 1fr auto; align-items: center; font-family: 'Instrument Serif', serif; font-size: 22px; }
+  .a nav span { display: flex; align-items: center; gap: 8px; }
+  .a .dot { width: 20px; height: 20px; border-radius: 50%; border: 6px solid var(--white); display: inline-block; flex: none; }
+  .a .dot.blue { border-color: var(--blue); }
+  .a .muted { color: var(--grey); opacity: .7; }
+  .a .pill { font-family: var(--mono); font-size: 11px; background: var(--white); color: var(--black); padding: 5px 12px; border-radius: 99px; }
+  .a .hero { font-family: 'Instrument Serif', serif; font-size: 5.2cqw; line-height: 1; margin: 40px 0 0 40px; }
+  .a .hero em { color: var(--blue); font-style: italic; }
+  .a .posts { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 24px; margin: 80px 0 40px 40px; }
+  .a .post .label { color: var(--grey); margin-bottom: 8px; }
+  .a .post h3 { font-family: 'Instrument Serif', serif; font-weight: 400; font-size: 26px; line-height: 1.1; }
+  .a .post h3 a { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 4px; }
+  .a .post h3 a:hover { color: var(--blue); }
+  .a .word { display: flex; align-items: center; gap: 1.5cqw; font-family: 'Instrument Serif', serif; font-size: 14.5cqw; line-height: .8; letter-spacing: -.03em; white-space: nowrap; margin-top: 10px; }
+  .a .word .ring { width: 12cqw; height: 12cqw; border-radius: 50%; border: 3.4cqw solid var(--blue); flex: none; }
+  .a .ticker { display: flex; justify-content: space-between; margin-top: 20px; color: var(--grey); }
+
+  /* ---------- B: Grotesk + Blau ---------- */
+  .b { background: var(--black); color: var(--grey); padding: 3cqw 3.5cqw 4cqw; }
+  .b h1 { font-family: 'Inter Tight', sans-serif; font-weight: 600; text-transform: uppercase; font-size: 9.3cqw; line-height: .86; letter-spacing: -.055em; text-align: center; }
+  .b .circle { position: absolute; top: 4cqw; right: 6cqw; width: 30cqw; height: 30cqw; border: 1.1cqw solid var(--blue); border-radius: 50%; display: grid; place-items: center; color: var(--blue); font-weight: 400; font-size: 21cqw; line-height: 1; letter-spacing: -.05em; }
+  .b hr { border: 0; border-top: 1px solid #4a4a4a; margin: 3cqw 0 1.3cqw; }
+  .b .meta { display: grid; grid-template-columns: 1fr 1fr 1fr; font-size: 13px; line-height: 1.25; color: var(--white); }
+  .b .meta div:nth-child(2) { text-align: center; } .b .meta div:nth-child(3) { text-align: right; }
+  .b .list { margin-top: 12cqw; }
+  .b .list .label { color: var(--grey); margin-bottom: 12px; }
+  .b .row { display: grid; grid-template-columns: 120px 1fr auto; gap: 24px; align-items: baseline; padding: 16px 0; border-top: 1px solid #333; color: var(--white); font-size: 26px; font-weight: 500; letter-spacing: -.02em; }
+  .b .row:last-child { border-bottom: 1px solid #333; }
+  .b .row .label { margin: 0; color: var(--grey); }
+  .b .row .arrow { color: var(--blue); }
+  .b .row:hover span:nth-child(2) { color: var(--blue); }
+  .b .about { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; margin-top: 6cqw; font-size: 17px; line-height: 1.3; color: var(--white); }
+  .b .about b { color: var(--blue); font-weight: 400; }
+
+  /* ---------- C: Weisses Raster ---------- */
+  .c { background-color: var(--white); color: var(--black); aspect-ratio: 16 / 11;
+       background-image:
+         linear-gradient(rgba(20,20,20,.09) 1px, transparent 1px),
+         linear-gradient(90deg, rgba(20,20,20,.09) 1px, transparent 1px);
+       background-size: 8.333cqw 8.333cqw; }
+  .c .blk { position: absolute; font-family: var(--mono); font-size: 11px; line-height: 1.35; text-transform: uppercase; text-align: justify; width: 170px; }
+  .c .blk a { text-decoration: none; }
+  .c .blk a:hover { color: var(--blue); }
+  .c .blk .num { color: var(--blue); }
+  .c .word { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); font-family: 'Archivo', sans-serif; font-weight: 900; font-size: 12cqw; letter-spacing: -.06em; line-height: 1; }
+  .c .word sup { font-family: var(--mono); font-size: 1.4cqw; font-weight: 500; letter-spacing: 0; vertical-align: top; color: var(--blue); }
+  .c .ann { position: absolute; font-family: var(--mono); font-size: 11px; text-transform: uppercase; }
+  .c .line { position: absolute; height: 1px; background: var(--blue); }
+
+  .notes { max-width: 1200px; margin: 14px auto 0; font-family: var(--mono); font-size: 12px; color: var(--white); line-height: 1.5; }
+
+  @media (max-width: 700px) {
+    .a .posts, .b .meta, .b .about { grid-template-columns: 1fr; }
+    .a nav { grid-template-columns: 1fr auto; } .a nav span:nth-child(2), .a nav span:nth-child(3) { display: none; }
+    .b .row { grid-template-columns: 1fr; font-size: 20px; gap: 4px; }
+    .c .blk { width: 110px; font-size: 9px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="intro">
+  <h1>felix-harenberg.github.io · 3 Richtungen · Schwarz / Weiss / Blau</h1>
+  <p>Startseite mit echtem Inhalt. Schau dir alle drei an und sag mir, was dich anspricht. Auch Mischungen sind möglich (z. B. Typo von A, Layout von B).</p>
+</div>
+
+<!-- A -->
+<div class="tag"><b>A</b>Editorial Serif · inspiriert von NewWorld</div>
+<div class="frame a">
+  <nav>
+    <span><i class="dot"></i>Felix Harenberg</span>
+    <span><i class="dot"></i><span class="muted">Posts,</span>&nbsp;Über</span>
+    <span><i class="dot"></i><span class="muted">Instagram,</span>&nbsp;GitHub</span>
+    <span><span class="pill">RSS</span><i class="dot blue"></i></span>
+  </nav>
+  <div class="hero">Gedanken,<br>Meinungen,<br><em>kein Comeback.</em></div>
+  <div class="posts">
+    <div class="post"><div class="label">06.10.2026 — Post 02</div><h3><a href="#">Ein Idiot in Bewegung macht mehr Fortschritt als ein Genie, das steht!</a></h3></div>
+    <div class="post"><div class="label">06.10.2026 — Post 01</div><h3><a href="#">Von average gibt es kein Comeback</a></h3></div>
+    <div class="post"><div class="label">Über</div><h3>Informatik an der ETH Zürich. Ich schreibe über das, was mich gerade beschäftigt.</h3></div>
+  </div>
+  <div class="word"><i class="ring"></i>Harenberg</div>
+  <div class="ticker label"><span>You vs You + Take messy action + Von Nichts kommt Nichts +</span><span>© 2026 Zürich</span></div>
+</div>
+<p class="notes">Warm-editorial, wie ein Magazin. Serif-Schrift (Instrument Serif), Kreuz-Raster im Hintergrund, Blau nur als Akzent (Ring, Kursiv, Hover).</p>
+
+<!-- B -->
+<div class="tag"><b>B</b>Grotesk + Blau · inspiriert von Orama / Collider</div>
+<div class="frame b">
+  <h1>Felix Harenberg<br>Gedanken · Meinungen<br>©2026 ETH ZH</h1>
+  <div class="circle">2</div>
+  <hr>
+  <div class="meta"><div>Blog von Felix<br>Harenberg</div><div>Posts, Über,<br>Instagram, GitHub</div><div>Zürich,<br>Schweiz</div></div>
+  <div class="list">
+    <div class="label">Posts</div>
+    <div class="row"><span class="label">06.10.26</span><span>Ein Idiot in Bewegung macht mehr Fortschritt als ein Genie, das steht!</span><span class="arrow">→</span></div>
+    <div class="row"><span class="label">06.10.26</span><span>Von average gibt es kein Comeback</span><span class="arrow">→</span></div>
+  </div>
+  <div class="about">
+    <p><span class="label" style="color:var(--grey)">Über</span><br><br>Ich bin Felix, studiere <b>Informatik</b> an der <b>ETH Zürich</b> und schreibe hier über das, was mich gerade beschäftigt.</p>
+    <p><br><br>Es geht um <b>Fortschritt</b>, <b>Disziplin</b> und darum, einfach anzufangen. You vs You.</p>
+  </div>
+</div>
+<p class="notes">Laut und plakativ. Riesige Grotesk-Schrift in Grau, ein blauer Kreis mit der Anzahl Posts, Liste wie ein Inhaltsverzeichnis. Am nächsten an deinem Orama-Bild.</p>
+
+<!-- C -->
+<div class="tag"><b>C</b>Weisses Raster · inspiriert von Reformr</div>
+<div class="frame c">
+  <div class="ann" style="left:16.66cqw;top:8.333cqw">Felix Harenberg<br>@felix.harenberg</div>
+  <div class="blk" style="left:4.5cqw;top:22cqw">Gedanken und Meinungen von einem Informatik&shy;studenten an der ETH Zürich.</div>
+  <div class="blk" style="left:50cqw;top:16.66cqw"><span class="num">01 —</span> <a href="#">Von average gibt es kein Comeback.</a> 06.10.2026</div>
+  <div class="blk" style="left:79cqw;top:23cqw"><span class="num">02 —</span> <a href="#">Ein Idiot in Bewegung macht mehr Fortschritt als ein Genie, das steht.</a> 06.10.2026</div>
+  <div class="ann" style="left:33.33cqw;top:28.5cqw">Est. 2026</div>
+  <div class="ann" style="left:58.33cqw;top:28.5cqw">Gedanken &amp; Meinungen</div>
+  <div class="word">harenberg<sup>®</sup></div>
+  <div class="line" style="left:33.33cqw;width:33.33cqw;top:42cqw"></div>
+  <div class="ann" style="left:33.33cqw;top:43cqw">Posts</div>
+  <div class="ann" style="left:47cqw;top:43cqw">Über</div>
+  <div class="ann" style="left:62cqw;top:43cqw">RSS</div>
+  <div class="blk" style="left:8.333cqw;top:52cqw">You vs You. Fortschritt ist Fortschritt, Hauptsache du machst welchen.</div>
+  <div class="blk" style="left:72cqw;top:58cqw">Take messy action. Von Nichts kommt Nichts. Ich glaub an dich.</div>
+  <div class="ann" style="left:41.66cqw;top:62cqw">github.com/felix-harenberg</div>
+</div>
+<p class="notes">Hell, ruhig, wie ein technisches Blatt. Weisses Papier mit Raster, Mono-Textblöcke verteilt, fettes Wortzeichen in der Mitte, Blau für Nummern und Links.</p>
+
+</body>
+</html>

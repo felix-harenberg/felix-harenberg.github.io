@@ -1,0 +1,43 @@
+---
+layout: default
+---
+{% assign n = 0 %}
+{% for p in site.posts reversed %}{% if p.url == page.url %}{% assign n = forloop.index %}{% endif %}{% endfor %}
+<article class="article">
+  <header class="article-head pad">
+    <a class="label back" href="{{ '/#posts' | relative_url }}">← Alle Posts</a>
+    <h1>{{ page.title | escape }}</h1>
+    <hr>
+    <div class="meta">
+      <div>{{ page.date | date: "%d.%m.%Y" }}</div>
+      <div>Nr. {% if n < 10 %}0{% endif %}{{ n }}</div>
+      <div>{{ content | number_of_words }} Wörter</div>
+    </div>
+  </header>
+
+  <div class="prose pad">
+    {{ content }}
+  </div>
+
+  {% if page.previous or page.next %}
+  <nav class="posts pad">
+    <div class="label">Weiterlesen</div>
+    {% if page.next %}
+    <a class="post-row" href="{{ page.next.url | relative_url }}">
+      <span class="label">Neuer</span>
+      <h2>{{ page.next.title | escape }}</h2>
+      <p class="ex">{{ page.next.excerpt | strip_html | truncatewords: 22 }}</p>
+      <span class="arrow">→</span>
+    </a>
+    {% endif %}
+    {% if page.previous %}
+    <a class="post-row" href="{{ page.previous.url | relative_url }}">
+      <span class="label">Älter</span>
+      <h2>{{ page.previous.title | escape }}</h2>
+      <p class="ex">{{ page.previous.excerpt | strip_html | truncatewords: 22 }}</p>
+      <span class="arrow">→</span>
+    </a>
+    {% endif %}
+  </nav>
+  {% endif %}
+</article>

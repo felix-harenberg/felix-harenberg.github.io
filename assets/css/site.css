@@ -1,0 +1,147 @@
+/* Felix Harenberg Blog: Schwarz / Weiss / Blau
+   Schriften: Archivo Expanded (Headlines), Inter Tight (Text),
+   Instrument Serif (Kursiv-Akzente), JetBrains Mono (Labels) */
+
+:root {
+  --black: #141414;
+  --white: #f4f4f1;
+  --grey: #b9b9b6;
+  --dim: #6f6f6c;
+  --line: #333;
+  --blue: #1f5fff;
+  --wide: 'Archivo', 'Inter Tight', sans-serif;
+  --sans: 'Inter Tight', system-ui, sans-serif;
+  --serif: 'Instrument Serif', Georgia, serif;
+  --mono: 'JetBrains Mono', ui-monospace, monospace;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { background: var(--black); scroll-behavior: smooth; }
+body { background: var(--black); color: var(--grey); font-family: var(--sans); -webkit-font-smoothing: antialiased; }
+a { color: inherit; text-decoration: none; }
+::selection { background: var(--blue); color: var(--white); }
+
+.site { max-width: 1440px; margin: 0 auto; container-type: inline-size; overflow: hidden; }
+.pad { padding: 0 3.5cqw; }
+.label { font-family: var(--mono); font-size: 11px; font-weight: 400; text-transform: uppercase; letter-spacing: .05em; color: var(--dim); }
+hr { border: 0; border-top: 1px solid #4a4a4a; }
+.star { fill: var(--blue); flex: none; }
+
+/* ---------- Navigation ---------- */
+.nav { display: grid; grid-template-columns: 1.4fr 1fr 1fr 1fr auto; gap: 24px; padding: 2.4cqw 3.5cqw 0;
+       font-family: var(--mono); font-size: 11px; text-transform: uppercase; color: var(--white); line-height: 1.6; }
+.nav .brand { display: flex; align-items: center; gap: 10px; font-family: var(--serif); font-size: 22px; text-transform: none; line-height: 1; height: fit-content; }
+.nav .brand .star { width: 22px; height: 22px; }
+.nav .head { color: var(--dim); }
+.nav a:hover { color: var(--blue); }
+.nav .cta { display: inline-block; border: 1px solid var(--white); padding: 6px 14px; }
+.nav .cta:hover { background: var(--blue); border-color: var(--blue); color: var(--white); }
+
+/* ---------- Startseite: Hero ---------- */
+.hero { position: relative; margin-top: 5cqw; }
+.hero h1 { font-family: var(--wide); font-stretch: 125%; font-weight: 800; text-transform: uppercase;
+           font-size: 7.6cqw; line-height: .92; letter-spacing: -.03em; }
+.hero h1 em { font-family: var(--serif); font-stretch: normal; font-weight: 400; font-style: italic; text-transform: none;
+              color: var(--white); letter-spacing: -.02em; font-size: 1.25em; }
+.count { position: absolute; right: 4cqw; top: -2cqw; width: 22cqw; height: 22cqw; border: .9cqw solid var(--blue); border-radius: 50%;
+         display: flex; align-items: center; justify-content: center; color: var(--blue); }
+.count span { font-family: var(--wide); font-stretch: 125%; font-weight: 700; font-size: 16.5cqw; line-height: 1; letter-spacing: -.04em; text-box: trim-both cap alphabetic; }
+.count.two-digit span { font-size: 10.5cqw; }
+.count small { position: absolute; bottom: 2.6cqw; left: 0; right: 0; text-align: center; font-family: var(--mono); font-size: 11px; letter-spacing: .05em; text-transform: uppercase; }
+
+.rule { margin-top: 3cqw; }
+.meta { display: grid; grid-template-columns: 1fr 1fr 1fr; padding-top: 1.3cqw; font-size: 13px; line-height: 1.25; color: var(--white); }
+.meta div:nth-child(2) { text-align: center; }
+.meta div:nth-child(3) { text-align: right; }
+
+/* ---------- Postliste (auch "Weiterlesen") ---------- */
+.posts { margin-top: 9cqw; }
+.posts > .label { display: block; margin-bottom: 12px; }
+.post-row { display: grid; grid-template-columns: 110px 1fr 230px 30px; gap: 28px; align-items: start; padding: 22px 0; border-top: 1px solid var(--line); }
+.post-row:last-child { border-bottom: 1px solid var(--line); }
+.post-row h2 { color: var(--white); font-family: var(--wide); font-stretch: 125%; font-size: 24px; font-weight: 700; letter-spacing: -.02em; line-height: 1.12; transition: color .15s; }
+.post-row .ex { font-family: var(--mono); font-size: 10.5px; line-height: 1.4; text-transform: uppercase; text-align: justify; color: var(--grey); }
+.post-row .arrow { color: var(--blue); font-size: 24px; text-align: right; transition: transform .15s; }
+.post-row:hover h2 { color: var(--blue); }
+.post-row:hover .arrow { transform: translateX(4px); }
+
+/* ---------- Kreuz-Raster-Feld ---------- */
+.field { position: relative; height: 34cqw; margin-top: 7cqw;
+         background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='46' height='46'%3E%3Cpath d='M23 19v8M19 23h8' stroke='%23f4f4f1' stroke-opacity='.16' stroke-width='1'/%3E%3C/svg%3E"); }
+.field .quote { position: absolute; left: 3.5cqw; top: 9cqw; font-family: var(--serif); font-size: 5cqw; line-height: 1; color: var(--white); }
+.field .quote i { color: var(--blue); }
+.field .note { position: absolute; width: 180px; font-family: var(--mono); font-size: 11px; line-height: 1.4; text-transform: uppercase; text-align: justify; color: var(--grey); }
+.field .note b { color: var(--blue); font-weight: 400; }
+.field .n1 { left: 52cqw; top: 5cqw; }
+.field .n2 { left: 78cqw; top: 15cqw; }
+.field .label { position: absolute; top: 27cqw; }
+.field .l1 { left: 52cqw; }
+.field .l2 { left: 78cqw; }
+
+/* ---------- Post & Seite ---------- */
+.article-head { margin-top: 6cqw; }
+.article-head .back { display: inline-block; margin-bottom: 2.4cqw; color: var(--white); }
+.article-head .back:hover { color: var(--blue); }
+.article-head h1 { color: var(--white); font-family: var(--wide); font-stretch: 125%; font-weight: 800; text-transform: uppercase;
+                   font-size: 5.2cqw; line-height: .95; letter-spacing: -.03em; max-width: 90%; margin-bottom: 3cqw; }
+
+.prose { margin-top: 5cqw; padding-left: calc(3.5cqw + 138px); color: #e4e4e0; font-size: 19px; line-height: 1.65; }
+.prose > * { max-width: 680px; }
+.prose p { margin-bottom: 1.2em; }
+.prose h2, .prose h3 { color: var(--white); font-family: var(--wide); font-stretch: 125%; font-weight: 700; text-transform: uppercase;
+                       font-size: 22px; letter-spacing: -.01em; line-height: 1.15; margin: 2.2em 0 .7em; }
+.prose h3 { font-size: 18px; }
+.prose strong { color: var(--white); font-weight: 600; }
+.prose a { color: var(--blue); text-decoration: underline; text-underline-offset: 3px; }
+.prose a:hover { color: var(--white); }
+.prose blockquote { font-family: var(--serif); font-style: italic; font-size: 30px; line-height: 1.2; color: var(--white); border-left: 3px solid var(--blue); padding-left: 24px; margin: 1.6em 0; }
+.prose ul, .prose ol { padding-left: 1.2em; margin-bottom: 1.2em; }
+.prose li::marker { color: var(--blue); }
+.prose code { font-family: var(--mono); font-size: .85em; background: #222; padding: 2px 6px; }
+.prose pre { background: #1d1d1d; padding: 16px; overflow-x: auto; margin-bottom: 1.2em; }
+.prose pre code { background: none; padding: 0; }
+.prose img { max-width: 100%; height: auto; }
+
+/* ---------- Footer-Wortmarke ---------- */
+.footer { margin-top: 9cqw; }
+.footer .word { display: flex; align-items: center; gap: 2cqw; padding: 0 3cqw; font-family: var(--wide); font-stretch: 125%; font-weight: 800;
+                text-transform: uppercase; color: var(--white); font-size: 9.4cqw; line-height: .8; letter-spacing: -.04em; white-space: nowrap; }
+.footer .word .star { width: 9cqw; height: 9cqw; }
+.footer .foot { display: flex; justify-content: space-between; gap: 16px; padding: 2cqw 3.5cqw; }
+
+/* ---------- Mobil ---------- */
+@media (max-width: 700px) {
+  .pad { padding: 0 16px; }
+  .nav { grid-template-columns: 1fr 1fr; padding: 20px 16px 0; row-gap: 16px; }
+  .nav .brand { grid-column: 1 / -1; }
+  .nav-place, .nav-cta { display: none; }
+
+  .hero { margin-top: 48px; }
+  .hero h1 { font-size: 10.5cqw; }
+  .count { position: relative; top: auto; right: auto; width: 34cqw; height: 34cqw; margin: 32px 0 0 auto; border-width: 1.4cqw; }
+  .count span { font-size: 21cqw; margin-top: -3cqw; }
+  .count.two-digit span { font-size: 16cqw; }
+  .count small { bottom: 4cqw; font-size: 9px; }
+
+  .rule { margin-top: 32px; }
+  .meta { grid-template-columns: 1fr; gap: 10px; padding-top: 16px; }
+  .meta div { text-align: left !important; }
+
+  .posts { margin-top: 56px; }
+  .post-row { grid-template-columns: 1fr; gap: 8px; }
+  .post-row h2 { font-size: 20px; }
+  .post-row .ex, .post-row .arrow { display: none; }
+
+  .field { height: auto; margin-top: 56px; padding: 40px 16px; display: grid; gap: 24px; }
+  .field .quote, .field .note, .field .label { position: static; }
+  .field .quote { font-size: 13cqw; }
+  .field .note { width: auto; max-width: 320px; }
+
+  .article-head { margin-top: 48px; }
+  .article-head h1 { font-size: 8.5cqw; max-width: none; margin-bottom: 24px; }
+  .prose { margin-top: 32px; padding-left: 16px; font-size: 17px; }
+
+  .footer { margin-top: 72px; }
+  .footer .word { padding: 0 16px; }
+  .footer .foot { flex-direction: column; padding: 16px; }
+}

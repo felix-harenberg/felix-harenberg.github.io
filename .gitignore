@@ -5,3 +5,6 @@ _site/
 vendor/
 .bundle/
 Gemfile.lock
+
+# Design-Inspiration (fremde Screenshots) nur lokal
+_design/inspiration/

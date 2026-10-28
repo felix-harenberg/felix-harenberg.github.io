@@ -1,0 +1,18 @@
+<nav class="nav">
+  <a class="brand" href="{{ '/' | relative_url }}">{% include star.html %}{{ site.title }}</a>
+  <div>
+    <div class="head">Blog</div>
+    <a href="{{ '/#posts' | relative_url }}">Posts</a><br>
+    <a href="{{ '/about/' | relative_url }}">Über</a>
+  </div>
+  <div>
+    <div class="head">Social</div>
+    <a href="https://instagram.com/{{ site.instagram_username }}">Instagram</a><br>
+    <a href="https://github.com/{{ site.github_username }}">GitHub</a>
+  </div>
+  <div class="nav-place">
+    <div class="head">Ort</div>
+    {{ site.location }}<br>Schweiz
+  </div>
+  <div class="nav-cta"><a class="cta" href="{{ '/feed.xml' | relative_url }}">RSS abonnieren</a></div>
+</nav>

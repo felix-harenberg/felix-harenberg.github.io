@@ -6,13 +6,20 @@ url: "https://felix-harenberg.github.io"
 baseurl: ""
 lang: de
 
-theme: minima
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
 
 github_username: felix-harenberg
 instagram_username: felix.harenberg
+
+# Eigenes Theme (siehe _layouts, _includes, assets/css/style.css)
+location: ETH Zürich
+about_short: Ich bin Felix, studiere Informatik an der ETH Zürich und schreibe hier über das, was mich gerade beschäftigt.
+slogans:
+  - You vs You
+  - Take messy action
+  - Von Nichts kommt Nichts
 
 permalink: /:year/:month/:title/
 
