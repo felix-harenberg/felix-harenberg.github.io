@@ -28,14 +28,12 @@ hr { border: 0; border-top: 1px solid #4a4a4a; }
 .star { fill: var(--blue); flex: none; }
 
 /* ---------- Navigation ---------- */
-.nav { display: grid; grid-template-columns: 1.4fr 1fr 1fr 1fr auto; gap: 24px; padding: 2.4cqw 3.5cqw 0;
+.nav { display: grid; grid-template-columns: 1.4fr 1fr 1fr 1fr; gap: 24px; padding: 2.4cqw 3.5cqw 0;
        font-family: var(--mono); font-size: 11px; text-transform: uppercase; color: var(--white); line-height: 1.6; }
 .nav .brand { display: flex; align-items: center; gap: 10px; font-family: var(--serif); font-size: 22px; text-transform: none; line-height: 1; height: fit-content; }
 .nav .brand .star { width: 22px; height: 22px; }
 .nav .head { color: var(--dim); }
 .nav a:hover { color: var(--blue); }
-.nav .cta { display: inline-block; border: 1px solid var(--white); padding: 6px 14px; }
-.nav .cta:hover { background: var(--blue); border-color: var(--blue); color: var(--white); }
 
 /* ---------- Startseite: Hero ---------- */
 .hero { position: relative; margin-top: 5cqw; }
@@ -114,7 +112,7 @@ hr { border: 0; border-top: 1px solid #4a4a4a; }
   .pad { padding: 0 16px; }
   .nav { grid-template-columns: 1fr 1fr; padding: 20px 16px 0; row-gap: 16px; }
   .nav .brand { grid-column: 1 / -1; }
-  .nav-place, .nav-cta { display: none; }
+  .nav-place { display: none; }
 
   .hero { margin-top: 48px; }
   .hero h1 { font-size: 10.5cqw; }
