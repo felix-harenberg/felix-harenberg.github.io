@@ -43,7 +43,7 @@ hr { border: 0; border-top: 1px solid #4a4a4a; }
               color: var(--white); letter-spacing: -.02em; font-size: 1.25em; }
 .count { position: absolute; right: 4cqw; top: -2cqw; width: 22cqw; height: 22cqw; border: .9cqw solid var(--blue); border-radius: 50%;
          display: flex; align-items: center; justify-content: center; color: var(--blue); }
-.count span { font-family: var(--wide); font-stretch: 125%; font-weight: 700; font-size: 16.5cqw; line-height: 1; letter-spacing: -.04em; text-box: trim-both cap alphabetic; }
+.count span { font-family: var(--wide); font-stretch: 125%; font-weight: 700; font-size: 16.5cqw; line-height: 1; letter-spacing: 0; text-box: trim-both cap alphabetic; }
 .count.two-digit span { font-size: 10.5cqw; }
 .count small { position: absolute; bottom: 2.6cqw; left: 0; right: 0; text-align: center; font-family: var(--mono); font-size: 11px; letter-spacing: .05em; text-transform: uppercase; }
 
@@ -68,10 +68,10 @@ hr { border: 0; border-top: 1px solid #4a4a4a; }
          background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='46' height='46'%3E%3Cpath d='M23 19v8M19 23h8' stroke='%23f4f4f1' stroke-opacity='.16' stroke-width='1'/%3E%3C/svg%3E"); }
 .field .quote { position: absolute; left: 3.5cqw; top: 9cqw; font-family: var(--serif); font-size: 5cqw; line-height: 1; color: var(--white); }
 .field .quote i { color: var(--blue); }
-.field .note { position: absolute; width: 180px; font-family: var(--mono); font-size: 11px; line-height: 1.4; text-transform: uppercase; text-align: justify; color: var(--grey); }
+.field .steps { position: absolute; left: 52cqw; top: 8cqw; right: 3.5cqw; display: grid; grid-template-columns: repeat(3, 1fr); gap: 2.4cqw; }
+.field .steps > .label { grid-column: 1 / -1; position: static; color: var(--white); }
+.field .note { font-family: var(--mono); font-size: 11px; line-height: 1.4; text-transform: uppercase; text-align: justify; color: var(--grey); }
 .field .note b { color: var(--blue); font-weight: 400; }
-.field .n1 { left: 52cqw; top: 5cqw; }
-.field .n2 { left: 78cqw; top: 15cqw; }
 .field .label { position: absolute; top: 27cqw; }
 .field .l1 { left: 52cqw; }
 .field .l2 { left: 78cqw; }
@@ -131,9 +131,10 @@ hr { border: 0; border-top: 1px solid #4a4a4a; }
   .post-row .ex, .post-row .arrow { display: none; }
 
   .field { height: auto; margin-top: 56px; padding: 40px 16px; display: grid; gap: 24px; }
-  .field .quote, .field .note, .field .label { position: static; }
+  .field .quote, .field .steps, .field .label { position: static; }
   .field .quote { font-size: 13cqw; }
-  .field .note { width: auto; max-width: 320px; }
+  .field .steps { grid-template-columns: 1fr; gap: 12px; }
+  .field .note { max-width: 320px; }
 
   .article-head { margin-top: 48px; }
   .article-head h1 { font-size: 8.5cqw; max-width: none; margin-bottom: 24px; }
